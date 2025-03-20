@@ -1,0 +1,46 @@
+body {
+  font-size: 15px;
+  line-height: 1.6;
+  font-family: $body-font;
+  color: $paragraph-color;
+  font-weight: 400;
+}
+
+p {
+  color: $paragraph-color;
+  font-weight: 400;
+}
+
+a {
+  display: inline-block;
+  -webkit-transition: all 0.5s ease;
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  &:focus {
+    outline: none;
+    border: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: $main-color;
+}
+h3 {
+  font-size: 22px;
+}
+
+

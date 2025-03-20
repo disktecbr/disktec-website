@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+$body-font: 'Livvic', serif;
+
+$main-color: #252525;
+$optional-color: #ffc221;
+$optional-color-2: #0460D9;
+$optional-bg: #021F59;
+$paragraph-color: #444444;
+$color-white: #ffffff;
+
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+@import "assets/css/boxicons.min.css";
+
+// Base
+@import "assets/styles/base/base";
+@import "assets/styles/topheader";

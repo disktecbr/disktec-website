@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+$body-font: 'Livvic', serif;
+
+$main-color: #252525;
+$optional-color: #ffc221;
+$optional-color-2: #0460D9;
+$optional-bg: #021F59;
+$paragraph-color: #444444;
+$color-white: #ffffff;
+
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+@import "../../assets/css/boxicons.min.css";
+
+// Base
+@import "../../assets/styles/base/base";
+
+// src/components/TopHeader/styles.scss
+
+// Container do cabeçalho superior
+.top-header {
+  width: 100%;
+  padding: 7px 0 10px;
+
+  &.top-header-bg {
+    background-color: $optional-bg;
+  }
+
+  // Container principal com flexbox
+  .top-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+// Estilos para informações de contato
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $color-white;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $optional-color;
+    }
+
+    i {
+      font-size: 18px;
+    }
+  }
+}
+
+// Wrapper lado direito
+.header-right-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+// Estilos para links sociais
+.social-links-container {
+  display: flex;
+  align-items: center;
+
+  .social-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+
+    .social-item {
+      position: relative;
+
+      .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        color: $color-white;
+        font-size: 18px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $optional-color;
+        }
+      }
+    }
+  }
+}
+
+// Estilos para seletor de idioma
+.language-selector {
+  position: relative;
+  z-index: 9999;
+  margin-left: -20px;
+  top: -1;
+
+  .language-select {
+    &__control {
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+    }
+
+    &__single-value {
+      color: $color-white;
+    }
+
+    &__menu {
+      background-color: $color-white;
+      border-radius: 0;
+      box-shadow: 0px 0px 29px 0px rgba(102, 102, 102, 0.1);
+    }
+
+    &__option {
+      transition: all 0.6s ease;
+      color: $main-color;
+      border-bottom: 1px solid #e1e1e1;
+
+      &--is-selected {
+        background-color: transparent !important;
+        color: $main-color !important;
+        font-weight: 700;
+      }
+
+      &:hover {
+        background-color: transparent !important;
+        color: $optional-color-2;
+        cursor: pointer;
+      }
+
+    }
+  }
+}
+
+// Media queries para design responsivo
+@media (max-width: 767px) {
+  .top-header-content {
+    flex-direction: column;
+    gap: 10px;
+
+    .header-right-wrapper {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

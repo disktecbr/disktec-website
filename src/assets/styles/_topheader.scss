@@ -1,0 +1,188 @@
+/*================================
+Top Header 
+===================================*/
+.top-header {
+  padding: 7px 0 10px;
+}
+.top-header-bg {
+  background-color: $optional-bg;
+}
+
+// Convert left side to flexbox
+.top-head-left {
+  display: flex;
+  align-items: center;
+
+  .top-contact {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      h3 {
+        a {
+          color: $optional-color;
+        }
+      }
+    }
+
+    h3 {
+      font-size: 14px;
+      color: $color-white;
+      margin-bottom: 0;
+      font-weight: 500;
+
+      a {
+        color: $color-white;
+        margin-bottom: 0;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $optional-color;
+        }
+      }
+    }
+  }
+}
+
+// Convert right side to flexbox
+.top-header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .top-header-social {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: flex;
+        position: relative;
+        margin-left: 5px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          color: $color-white;
+          font-size: 18px;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $optional-color;
+          }
+        }
+      }
+    }
+  }
+
+  .language-list {
+    position: relative;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+  }
+}
+
+// Custom React Select styling
+// These classes match the classNamePrefix="language-selector" in the React component
+.language-selector {
+  &__control {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    min-height: unset !important;
+    cursor: pointer !important;
+  }
+
+  &__value-container {
+    padding: 0 !important;
+  }
+
+  &__single-value {
+    color: $color-white !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+  }
+
+  &__indicator {
+    color: $color-white !important;
+
+    &:hover {
+      color: $color-white !important;
+    }
+
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  &__menu {
+    margin-top: 20px !important;
+    border-radius: 0 !important;
+    box-shadow: 0px 0px 29px 0px rgba(102, 102, 102, 0.1) !important;
+    z-index: 9999 !important;
+  }
+
+  &__option {
+    padding: 8px 15px !important;
+    color: $main-color !important;
+    border-bottom: 1px solid #e1e1e1 !important;
+    cursor: pointer !important;
+    transition: color 0.3s ease !important;
+
+    &--is-selected {
+      background-color: transparent !important;
+      color: $optional-color-2 !important;
+      font-weight: 500 !important;
+    }
+
+    &:hover {
+      background-color: transparent !important;
+      color: $optional-color-2 !important;
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 767px) {
+  .top-head-left, .top-header-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .top-header-right {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-header-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-header-social {
+    margin-right: 0 !important;
+    margin-bottom: 10px;
+  }
+}
+/*================================
+Top Header End
+===================================*/
